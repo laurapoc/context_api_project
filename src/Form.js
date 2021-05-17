@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
+// import CssBaseline from "@material-ui/core/CssBaseline";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -32,11 +32,11 @@ class Form extends Component {
           </Select>
           <form className={classes.form}>
             <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlForm="email">Email</InputLabel>
+              <InputLabel htmlform="email">Email</InputLabel>
               <Input id="email" name="email" autoFocus></Input>
             </FormControl>
             <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlForm="password">Password</InputLabel>
+              <InputLabel htmlform="password">Password</InputLabel>
               <Input id="password" name="password" autoFocus></Input>
             </FormControl>
             <FormControlLabel control={<Checkbox color="primary" />} label="Remember me" />
