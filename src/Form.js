@@ -14,9 +14,24 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/FormStyles";
+import { LanguageContext } from "./contexts/LanguageContext";
+
+const words = {
+  english: {
+    email: "Email",
+  },
+  french: {
+    email: "E-mail",
+  },
+  spanish: {
+    email: "Correo electrónico",
+  },
+};
 
 class Form extends Component {
+  static contextType = LanguageContext;
   render() {
+    const { language } = this.context;
     const { classes } = this.props;
     return (
       <main className={classes.main}>
@@ -39,8 +54,17 @@ class Form extends Component {
               <InputLabel htmlform="password">Password</InputLabel>
               <Input id="password" name="password" autoFocus></Input>
             </FormControl>
-            <FormControlLabel control={<Checkbox color="primary" />} label="Remember me" />
-            <Button variant="contained" type="submit" fullWidth color="primary" className={classes.submit}>
+            <FormControlLabel
+              control={<Checkbox color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              variant="contained"
+              type="submit"
+              fullWidth
+              color="primary"
+              className={classes.submit}
+            >
               Sign In
             </Button>
           </form>
