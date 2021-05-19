@@ -10,9 +10,7 @@ export function LanguageProvider(props) {
   };
 
   return (
-    <LanguageContext.Provider
-      value={{ language, changeLanguage }}
-    >
+    <LanguageContext.Provider value={{ language, changeLanguage }}>
       {props.children}
     </LanguageContext.Provider>
   );
